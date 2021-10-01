@@ -1,0 +1,51 @@
+:root{
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    text-align: center;
+    justify-content: center;
+}
+
+.left-content{
+
+}
+
+.weather-form{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid black;
+}
+.weather-form h2{
+    margin-bottom: 1rem;
+}
+.weather-form input{
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+.weather-form button{
+    text-align: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.weather-list-container ul{
+    overflow: auto;
+    overflow-y: auto;
+    height: 50vh;
+}
+
+.weather-list-item{
+    background-color: green;
+    border-radius: 7px;
+    padding: .5rem;
+    margin: .5rem 0;
+}

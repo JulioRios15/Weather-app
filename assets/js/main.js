@@ -1,9 +1,9 @@
-import {getCurrentCityWeather,
-        getCurrentCityWeatherForDays
-} from './api/requests.js';
+import {getWeartherFormSearchButton, getWeatherFormInput} from './elements/elementHelpers.js';
+import { searchWeather } from './api/weather.js';
 
-const weather = await getCurrentCityWeather("thailand").finally();
 
-const daysWeather = await getCurrentCityWeatherForDays("thailand");
-console.log(weather);
-console.log(daysWeather);
+var searchButton = getWeartherFormSearchButton();
+searchButton.addEventListener('click', searchWeather);
+
+
+

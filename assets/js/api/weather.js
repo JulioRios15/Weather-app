@@ -24,8 +24,6 @@ export const onSearchWeather = async () => {
 }
 //called after searche button pressed or city from list clicked
 export const searchWeather = async (city) => {
-    console.log('weather searched');
-
     const cityWeatherResponse = await getCurrentCityWeather(city);
     const cityForecastResponse = await getCurrentCityWeatherForDays(city);
 
@@ -35,7 +33,6 @@ export const searchWeather = async (city) => {
         currentCityForecast = cityForecastResponse;
         rerenderWeatherInfo();
         rerenderForecastCards();
-        console.log('rerender weather');
     }
 
     //save only if city is valid and not exist in local storage and rerender city list

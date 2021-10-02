@@ -16,7 +16,6 @@ export const createForecastCard = (childToAppend, data, date) => {
 
     //Text Content
     dateEl.textContent = `(${date})`;
-    console.log(data);
     tempEl.textContent = `Temp: ${data.main.temp} F`;
     windEl.textContent = `Wind: ${data.wind.speed} MPH`;
     humidityEl.textContent = `Humidity: ${data.main.humidity} %`;

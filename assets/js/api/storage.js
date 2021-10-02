@@ -19,7 +19,11 @@ export const cityExist = (city) => {
     const cities = getSavedCities();
     //search for cities saved in local storage and return false if not saved
     for (let i = 0; i < cities.length; i++) {
-        return (cities[i] === city)? true : false;     
+        if(cities[i] == city) {
+            return true;
+        }
     }
+
+    return false;
 }
 

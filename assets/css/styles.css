@@ -31,6 +31,12 @@ ul{
 .navbar{
     text-align: center;
     justify-content: center;
+    background-color: var(--primary);
+    padding: .1rem 0;
+}
+
+.navbar span{
+    font-size: 2rem;
 }
 
 .left-content{
@@ -67,6 +73,9 @@ ul{
     cursor: pointer;
 }
 
+/*--------------------------------------------Cities List----------------------------------------*/
+
+
 #cities-list-container ul{
     overflow: auto;
     overflow-y: auto;
@@ -86,3 +95,9 @@ ul{
     background-color: var(--grey-hover);
     
 }
+
+/*--------------------------------------------Weather--------------------------------------------*/
+
+
+
+

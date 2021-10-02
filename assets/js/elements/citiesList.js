@@ -1,14 +1,21 @@
 import {getCitiesListContainer} from './elementHelpers.js'
-const createCitiesLi = (cities) => {
+import {getSavedCities} from '../api/storage.js'
+import {searchWeather} from '../api/weather.js'
+const createCitiesLi = () => {
     var citiesLiEls = [];
     const cityLiId = 'cities-list-item';
     const emptyCityLiId = "cities-list-item-empty"
+
+    const cities = getSavedCities();
 
     if(cities){
         cities.forEach(item => {
             var liEl = document.createElement('li');
             liEl.textContent = item;
             liEl.id = cityLiId;
+            liEl.onclick = ()=> {
+                searchWeather(item);
+            }
 
             citiesLiEls.push(liEl);
         });
@@ -23,10 +30,10 @@ const createCitiesLi = (cities) => {
     return citiesLiEls;
 }
 
-export const createCitiesList = (childToAppend, cities) => {
+export const createCitiesList = (childToAppend) => {
     //creating elements
     var ulEl = document.createElement('ul');
-    var citiesLiEls = createCitiesLi(cities);
+    var citiesLiEls = createCitiesLi();
 
     //appending
     citiesLiEls.forEach((elemet) => {
@@ -38,4 +45,9 @@ export const createCitiesList = (childToAppend, cities) => {
 export const clearCitiesList = () => {
     var citiesListEl = getCitiesListContainer();  
     citiesListEl.innerHTML = "";
+}
+
+export const rerenderCitiesList = () => {
+    clearCitiesList();
+    createCitiesList(getCitiesListContainer());
 }

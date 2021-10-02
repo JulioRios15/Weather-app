@@ -3,7 +3,7 @@ import {config} from './config.js';
 const key = config.apiKey;
 
 export const getCurrentCityWeather = async (city) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`;
     var obj;
 
     await fetch(url)
@@ -17,7 +17,7 @@ export const getCurrentCityWeather = async (city) => {
 }
 
 export const getCurrentCityWeatherForDays = async (city) => {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}`;
+    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${key}`;
     var obj;
 
     await fetch(url)

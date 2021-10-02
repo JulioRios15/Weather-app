@@ -22,11 +22,11 @@ export const getCitiesListContainer = () => {
     return (element)? element : null;
 }
 export const getCurrentWeatherContainer = () => {  
-    var element = document.getElementsByClassName('current-weather-container');
+    var element = document.getElementById("current-weather-container");
     return (element)? element : null;
 }
 export const getForecastContainer = () => {  
-    var element = document.getElementsByClassName('forecast-container');
+    var element = document.getElementById('forecast-container');
     return (element)? element : null;
 }
 

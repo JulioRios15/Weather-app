@@ -1,6 +1,6 @@
 import {getWeartherFormSearchButton, getWeatherFormInput} from './elements/elementHelpers.js';
 import { onSearchWeather,searchWeather } from './api/weather.js';
-import {initialize} from './api/weather.js'
+import {initialize} from './api/weather.js';
 
 
 var searchButton = getWeartherFormSearchButton();

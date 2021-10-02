@@ -1,4 +1,8 @@
-export const createForecastCard = (childToAppend, weather) => {
+import {getForecastContainer} from './elementHelpers.js'
+import {getCurrentCityForecast} from '../api/weather.js';
+import {getNextDay} from '../api/date.js';
+
+export const createForecastCard = (childToAppend, data, date) => {
     //Creating Elements
     var containerEl = document.createElement('div');
     var dateEl = document.createElement('h3');
@@ -11,6 +15,12 @@ export const createForecastCard = (childToAppend, weather) => {
     containerEl.id = "forecast-card";
 
     //Text Content
+    dateEl.textContent = `(${date})`;
+    console.log(data);
+    tempEl.textContent = `Temp: ${data.main.temp} F`;
+    windEl.textContent = `Wind: ${data.wind.speed} MPH`;
+    humidityEl.textContent = `Humidity: ${data.main.humidity} %`;
+    
 
     //Appending Elements
     containerEl.appendChild(dateEl);
@@ -21,4 +31,21 @@ export const createForecastCard = (childToAppend, weather) => {
 
     childToAppend.appendChild(containerEl);
 
+}
+
+export const createForecastCards = () => {
+    const forecast = getCurrentCityForecast();
+    for (let i = 0; i < 5; i++) {
+        createForecastCard(getForecastContainer(), forecast.list[i], getNextDay(i+1));
+    }
+}
+
+export const clearForecastCards = () => {
+    var forecastContainer = getForecastContainer();
+    forecastContainer.innerHTML = "";
+}
+
+export const rerenderForecastCards = () => {
+    clearForecastCards();
+    createForecastCards();
 }

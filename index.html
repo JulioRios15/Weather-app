@@ -18,10 +18,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col col-3">
+                <div class="col col-3 content">
                     <div class="left-content">
                         <div class="weather-form">
-                            <h2>City</h2>
+                            <h2>Search for a City</h2>
                             <input type="text" id="cityFormInput">
                             <button id="weatherFormButton">Search</button>
                         </div>
@@ -29,11 +29,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-9">
+                <div class="col col-9 content">
                     <div class="right-content">
-                        <div class="current-weather-container">
+                        <div class="current-weather-container" id="current-weather-container">
                         </div>
-                        <div class="forecast-container">
+                        <div class="forecast-container" id="forecast-container">
                             <h2>5-Day Forecast</h2>
 
                         </div>
@@ -54,6 +54,9 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous">
     </script>
+    
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">

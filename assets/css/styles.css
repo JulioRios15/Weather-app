@@ -1,12 +1,12 @@
 :root{
     --primary: #3DB2FF;
     --primary-hover: #2ba2f1;
-    --seccondary: #FFEDDA;
+    --seccondary: #ececec;
     --info: #FFB830;
     --danger: #FF2442;
     --success: #84C69B;
     --beige: #FFEDDA;
-    --dark: #303841;
+    --dark: #47515c;
     --body: rgb(236, 236, 236);
     --body-darker : rgb(221, 220, 220);
     --grey :rgb(170, 170, 170);
@@ -62,6 +62,7 @@ ul{
     padding: .5rem 1rem;
     width: 100%;
     border: none;
+    border-radius: 7px;
 }
 .weather-form button{
     text-align: center;
@@ -69,10 +70,10 @@ ul{
     justify-content: center;
     padding: .5rem 1rem;
     margin-bottom: 1rem;
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     width: 100%;
-    color: white;
+    color: var(--seccondary);
     background-color: var(--primary);
 }
 .weather-form button:hover{
@@ -130,7 +131,8 @@ ul{
     padding: 1rem;
     margin: 1rem;
     border-radius: 7px;
-    background-color: var(--grey);
+    background-color: var(--dark);
+    color: var(--seccondary);
     width: 15rem;
     height: 15rem;
 }

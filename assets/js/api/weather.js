@@ -49,9 +49,9 @@ export const initialize = async () => {
     const savedCities = getSavedCities();
 
     if(savedCities == null){
+        saveCity('Puerto Rico');
         saveCity('New York');
         saveCity('Orlando');
-        saveCity('Chicago');
 
         await searchWeather('New york');  
     } else{

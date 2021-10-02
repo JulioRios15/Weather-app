@@ -1,6 +1,6 @@
 import {getWeartherFormSearchButton, getWeatherFormInput} from './elements/elementHelpers.js';
 import { onSearchWeather,searchWeather } from './api/weather.js';
-import {saveCity, getSavedCities} from './api/storage.js'
+import {initialize} from './api/weather.js'
 
 
 var searchButton = getWeartherFormSearchButton();
@@ -13,6 +13,8 @@ inputButton.addEventListener('keyup', ()=> {
             searchButton.click();
         }
     });
+
+initialize();
 
 
 

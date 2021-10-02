@@ -7,8 +7,9 @@ export const saveCity = (city) => {
     const newCity = [city]; 
 
     if(savedCities != null){
-        const newCities = [...savedCities, newCity];
+        const newCities = [...savedCities, ...newCity];
         localStorage.setItem("cities", JSON.stringify(newCities));
+        console.log(newCities);
     } else{
         localStorage.setItem("cities", JSON.stringify(newCity));
     }    

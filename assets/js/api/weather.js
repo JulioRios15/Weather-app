@@ -1,11 +1,11 @@
-import {getWeatherFormInput} from '../elements/elementHelpers.js'
+import {getCitiesListContainer, getWeatherFormInput, getLeftContent} from '../elements/elementHelpers.js'
 import {} from '../elements/forecastCard.js';
+import {createCitiesList, clearCitiesList} from '../elements/citiesList.js'
 import {getCurrentCityWeather,
     getCurrentCityWeatherForDays
 } from './requests.js';
 
-
-import { getSavedCities, saveCity } from './storage.js';
+import { getSavedCities, saveCity, cityExist } from './storage.js';
 
 var currentWeather;
 var currentWeatherForecast;
@@ -31,11 +31,14 @@ export const searchWeather = async () => {
 }
 
 export const initialize = () => {
-    saveCity('Isabela');
-    const savedCities = getSavedCities();
+    if(getSavedCities() == null){
+        saveCity('New York');
+        saveCity('Orlando');
+        saveCity('Chicago');
+    }
+
+    createCitiesList(getCitiesListContainer(), getSavedCities());
+
+
     
-    
-
-
-
 }

@@ -13,3 +13,12 @@ export const getWeartherFormSearchButton = () => {
     return (element)? element : null;
 }
 
+export const getLeftContent = () => {  
+    var element = document.getElementsByClassName('left-content');
+    return (element)? element : null;
+}
+export const getCitiesListContainer = () => {  
+    var element = document.getElementById('cities-list-container');
+    return (element)? element : null;
+}
+

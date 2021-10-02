@@ -9,6 +9,8 @@
     --dark: #303841;
     --body: rgb(236, 236, 236);
     --body-darker : rgb(221, 220, 220);
+    --grey :rgb(170, 170, 170);
+    --grey-hover :rgb(156, 156, 156);
 }
 
 *{
@@ -65,15 +67,22 @@ ul{
     cursor: pointer;
 }
 
-.weather-list-container ul{
+#cities-list-container ul{
     overflow: auto;
     overflow-y: auto;
     height: 50vh;
+    text-align: center;
 }
 
-.weather-list-item{
-    background-color: green;
+#cities-list-item{
+    background-color: var(--grey);
     border-radius: 7px;
     padding: .5rem;
     margin: .5rem 0;
+    cursor: pointer;
+}
+
+#cities-list-item:hover{
+    background-color: var(--grey-hover);
+    
 }
